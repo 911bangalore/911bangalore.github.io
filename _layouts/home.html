@@ -25,14 +25,12 @@
   {% if page.image.credit %}
     <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
   {% endif %}
+  <h3 style="color:white">911Bangalore is a mobile app that would let you reach out to Bangalore top cops in moment of distress</h3>
   </div><!-- /.image-wrap -->
 {% endif %}
 
-<div id="main" role="main"> 
-  <div class="article-author-side">
-    {% include _author-bio.html %}
-  </div>
-  <div id="index">
+<div id="main" role="main">
+  <div id="index" style="margin:0 auto; display:block; float:none">
     <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
     {% for post in site.posts limit:5 %}    
     <article>

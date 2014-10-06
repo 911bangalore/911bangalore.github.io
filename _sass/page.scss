@@ -5,17 +5,20 @@ body {
 }
 .navigation-wrapper {
 	@include container;
-	padding: 2em 0 1em;
+	padding: 1em 0 0;
 	font-family: $heading-font;
 	font-weight: 700;
 	text-transform: uppercase;
 	@include clearfix;
+	background-color: black
+}
+.navigation-wrapper a {
+	color: white !important;
 }
 .site-name {
 	@include grid(12,10);
 	@include prefix(12,1);
 	@include suffix(12,1);
-	margin-bottom: 1em;
 	float: none;
 	display: block;
 	@include font-rem(24);
