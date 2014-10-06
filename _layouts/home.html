@@ -44,26 +44,38 @@
 		 <li>Police deploys help to you if you need it to your location.</li>
 	  </ol>
 	  <h3 style="margin-top:2em" id="posts">Blog Posts<small><br/>List of posts detailing the distress encounters & the app experience of people</small></h3>
-    {% for post in site.posts %}    
-    <article>
-      {% if post.link %}
-        <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
-      {% else %}
-        <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-      {% endif %}
-    </article>
-    {% endfor %}
+	  <table id="blog-post-list">
+		  {% for post in site.posts %}    
+		  <tr>
+			  <td style="text-align:left">
+				  <time datetime="2014-09-20" class="icon">
+				  <em>{{ post.date | date: "%A" }}</em>
+				  <strong>{{ post.date | date: "%Y %b" }}</strong>
+				  <span>{{ post.date | date: "%-d" }}</span>
+				  </time>
+			  </td>
+			  <td>&nbsp;</td>
+			  <td>
+				  {% if post.link %}
+				  <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></a></h2>
+				  {% else %}
+				  <h2><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></h2>
+				  <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+				  {% endif %}
+			  </td>
+		  </tr>
+		  {% endfor %}
+	  </table>
   </div><!-- /#index -->
 </div><!-- /#main -->
 
 <div class="footer-wrap">
-  <footer>
-    {% include _footer.html %}
-  </footer>
+	<footer>
+	{% include _footer.html %}
+	</footer>
 </div><!-- /.footer-wrap -->
 
 {% include _scripts.html %}
-  
-</body>
+
+	</body>
 </html>
