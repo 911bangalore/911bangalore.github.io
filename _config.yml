@@ -2,7 +2,7 @@
 
 title:            911 Bangalore
 locale:           en_US
-url:              http://911bangalore.com
+url:              http://localhost:4000
 
 
 # Jekyll configuration
@@ -27,11 +27,11 @@ kramdown:
 # Site owner
 owner:
   name: 911 Bangalore
-  avatar: bio-photo.jpg
-  bio: "Describe your self."
-  email: 
-  disqus-shortname: 
-  twitter: #username
+  avatar: https://pbs.twimg.com/profile_images/516458536801300480/uag5d2ub_400x400.png
+  bio: "Our mobile app lets you record an audio/video & tweet it to the bangalore top cops for immediate help. App coming soon. Follow us on Twitter for updates."
+  email: #support@911bangalore.com
+  disqus-shortname: codelearnorg
+  twitter: 911bangalore
   facebook: #username
   google:
     plus: #username
