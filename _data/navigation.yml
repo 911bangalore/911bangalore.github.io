@@ -3,6 +3,9 @@
 - title: Home
   url: /
 
-- title: Sample Posts
-  url: /posts/
+- title: How It Works
+  url: /#how-it-works
+
+- title: Blog
+  url: /#posts
 

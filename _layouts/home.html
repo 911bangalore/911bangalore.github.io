@@ -14,7 +14,7 @@
 {% include _navigation.html %}
 
 {% if page.image.feature %}
-  <div class="image-wrap">
+  <div class="image-wrap" style="background-color:black; color:white">
   <img src=
     {% if page.image.feature contains 'http' %}
       "{{ page.image.feature }}"
@@ -25,14 +25,26 @@
   {% if page.image.credit %}
     <span class="image-credit">Photo Credit: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></span>
   {% endif %}
-  <h3 style="color:white">911Bangalore is a mobile app that would let you reach out to Bangalore top cops in moment of distress</h3>
+  
+		<div style="width:80%; margin:0 auto; text-align:center; padding-bottom: 1em">
+			<h3 style="margin-bottom:0.1em">911Bangalore is a <span style="color:red">mobile app</span> that lets you reach to Bangalore top cops for help</h3>
+			<h4 style="margin-top:0.1em">The app is still under production. Follow us on Twitter for updates.</h4>
+			<a href="http://twitter.com/911bangalore" class="btn btn-danger">Follow on Twitter</a>	
+		</div>
   </div><!-- /.image-wrap -->
 {% endif %}
 
+
 <div id="main" role="main">
-  <div id="index" style="margin:0 auto; display:block; float:none">
-    <h3><a href="{{ site.url}}/posts/">Recent Posts</a></h3>
-    {% for post in site.posts limit:5 %}    
+	<div id="index" style="margin:0 auto; display:block; float:none">
+	  <h3 id="how-it-works">How it works</h3>
+	  <ol>
+		 <li>The app lets you record your moment of distress through video, audio or call recording.</li>
+		 <li>It tweets it with your contact number & location information to Bangalore Commissioner of Police @CPBlr.</li>
+		 <li>Police deploys help to you if you need it to your location.</li>
+	  </ol>
+	  <h3 style="margin-top:2em" id="posts">Blog Posts<small><br/>List of posts detailing the distress encounters & the app experience of people</small></h3>
+    {% for post in site.posts %}    
     <article>
       {% if post.link %}
         <h2 class="link-post"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> <a href="{{ post.link }}" target="_blank" title="{{ post.title }}"><i class="fa fa-link"></i></h2>
